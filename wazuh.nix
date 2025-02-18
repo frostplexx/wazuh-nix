@@ -4,7 +4,7 @@ let
 
   wazuh-reload = pkgs.writeShellScriptBin "wazuh-reload" ''
     set -e
-    sleep 60
+    sleep 120
 
     INSTALLATION_DIR=/usr/share/wazuh-indexer
     ${pkgs.docker}/bin/docker exec \
