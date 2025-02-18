@@ -1,7 +1,7 @@
 # Wazuh-nix
 
 This repository contains the necessary files to build a Wazuh stack (Indexer, server & dashboard) for NixOS.
-It use the [wazuh-docker](https://github.com/wazuh/wazuh-docker.git) repository to build the docker images which is pretty gross but it works.
+It use the [wazuh-docker](https://github.com/wazuh/wazuh-docker.git) repository to build the docker images **which is pretty gross but it works**.
 
 **Wazuh version**: 4.10.1
 
