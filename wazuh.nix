@@ -14,7 +14,7 @@ let
   '';
 in {
 
-  imports = [ ./certs.nix ];
+  imports = [ ./certs.nix ./sysmon-rules.nix ];
 
   options.programs.wazuh = {
     enable = lib.mkEnableOption "Enable Wazuh stack";
@@ -136,6 +136,7 @@ in {
               - ./config/wazuh_indexer_ssl_certs/wazuh.manager.pem:/etc/ssl/filebeat.pem
               - ./config/wazuh_indexer_ssl_certs/wazuh.manager-key.pem:/etc/ssl/filebeat.key
               - ./config/wazuh_cluster/wazuh_manager.conf:/wazuh-config-mount/etc/ossec.conf
+              - ./config/local_rules.xml:/var/ossec/etc/rules/local_rules.xml
 
           wazuh.indexer:
             image: wazuh/wazuh-indexer:4.10.1
