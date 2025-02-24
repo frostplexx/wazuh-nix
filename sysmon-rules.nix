@@ -1,6 +1,7 @@
 { config, lib, ... }: {
 
   config = lib.mkIf config.programs.wazuh.enable {
+    # Comming from https://github.com/sametsazak/sysmon
     environment.etc."wazuh/config/local_rules.xml".text = ''
       <!--
       Rules from https://github.com/Neo23x0/sigma/tree/master/rules/windows/sysmon
