@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }:
 let
-  version = "4.10.1";
+  version = "5.0.0";
 
   wazuh-reload = pkgs.writeShellScriptBin "wazuh-reload" ''
     set -e
